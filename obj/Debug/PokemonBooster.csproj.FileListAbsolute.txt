@@ -40,3 +40,6 @@ C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\System.Thre
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\obj\Debug\PokemonB.8E37BEA0.Up2Date
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\obj\Debug\PokemonBooster.exe
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\obj\Debug\PokemonBooster.pdb
+C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Booster-Eau.jpg
+C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Booster-Electric.jpg
+C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Booster-Feu.jpg

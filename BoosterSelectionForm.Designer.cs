@@ -1,4 +1,5 @@
 ﻿using PokemonTCG;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PokemonBooster
@@ -22,33 +23,61 @@ namespace PokemonBooster
             }
             base.Dispose(disposing);
         }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
 
-            Button btnBooster1 = new Button();
-            btnBooster1.Location = new System.Drawing.Point(50, 50);
-            btnBooster1.Size = new System.Drawing.Size(200, 50);
-            btnBooster1.Text = "Booster Feu";
-            btnBooster1.Click += (sender, e) => OpenMainForm("Feu");
+            Label lblBoosterFeu = new Label();
+            lblBoosterFeu.Location = new System.Drawing.Point(50, 10);
+            lblBoosterFeu.Size = new System.Drawing.Size(200, 30);
+            lblBoosterFeu.Text = "Booster Feu";
+            lblBoosterFeu.TextAlign = ContentAlignment.MiddleCenter;
 
-            Button btnBooster2 = new Button();
-            btnBooster2.Location = new System.Drawing.Point(50, 120);
-            btnBooster2.Size = new System.Drawing.Size(200, 50);
-            btnBooster2.Text = "Booster Eau";
-            btnBooster2.Click += (sender, e) => OpenMainForm("Eau");
+            Label lblBoosterEau = new Label();
+            lblBoosterEau.Location = new System.Drawing.Point(300, 10);
+            lblBoosterEau.Size = new System.Drawing.Size(200, 30);
+            lblBoosterEau.Text = "Booster Eau";
+            lblBoosterEau.TextAlign = ContentAlignment.MiddleCenter;
 
-            Button btnBooster3 = new Button();
-            btnBooster3.Location = new System.Drawing.Point(50, 190);
-            btnBooster3.Size = new System.Drawing.Size(200, 50);
-            btnBooster3.Text = "Booster Électrique";
-            btnBooster3.Click += (sender, e) => OpenMainForm("Électrique");
 
-            this.Controls.Add(btnBooster1);
-            this.Controls.Add(btnBooster2);
-            this.Controls.Add(btnBooster3);
+            Label lblBoosterElectric = new Label();
+            lblBoosterElectric.Location = new System.Drawing.Point(550, 10);
+            lblBoosterElectric.Size = new System.Drawing.Size(200, 30);
+            lblBoosterElectric.Text = "Booster Électrique";
+            lblBoosterElectric.TextAlign = ContentAlignment.MiddleCenter;
 
-            this.ClientSize = new System.Drawing.Size(300, 300);
+            PictureBox pbBoosterFeu = new PictureBox();
+            pbBoosterFeu.Location = new System.Drawing.Point(50, 50); 
+            pbBoosterFeu.Size = new System.Drawing.Size(200, 200); 
+            pbBoosterFeu.Image = Image.FromFile("Images/Booster-Feu.jpg");
+            pbBoosterFeu.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbBoosterFeu.Cursor = Cursors.Hand;
+            pbBoosterFeu.Click += (sender, e) => OpenMainForm("Feu");
+
+            PictureBox pbBoosterEau = new PictureBox();
+            pbBoosterEau.Location = new System.Drawing.Point(300, 50);
+            pbBoosterEau.Size = new System.Drawing.Size(200, 200);
+            pbBoosterEau.Image = Image.FromFile("Images/Booster-Eau.jpg");
+            pbBoosterEau.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbBoosterEau.Cursor = Cursors.Hand; 
+            pbBoosterEau.Click += (sender, e) => OpenMainForm("Eau");
+
+            PictureBox pbBoosterElectric = new PictureBox();
+            pbBoosterElectric.Location = new System.Drawing.Point(550, 50); 
+            pbBoosterElectric.Size = new System.Drawing.Size(200, 200);  
+            pbBoosterElectric.Image = Image.FromFile("Images/Booster-Electric.jpg");
+            pbBoosterElectric.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbBoosterElectric.Cursor = Cursors.Hand; 
+            pbBoosterElectric.Click += (sender, e) => OpenMainForm("Électrique");
+            this.Controls.Add(lblBoosterFeu);
+            this.Controls.Add(lblBoosterEau);
+            this.Controls.Add(lblBoosterElectric);
+            this.Controls.Add(pbBoosterFeu);
+            this.Controls.Add(pbBoosterEau);
+            this.Controls.Add(pbBoosterElectric);
+
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Text = "Choisissez un Booster";
             this.ResumeLayout(false);
         }
@@ -60,7 +89,6 @@ namespace PokemonBooster
             mainForm.ShowDialog(); 
             this.Show();
         }
-    }
 
-    
+    }
 }
