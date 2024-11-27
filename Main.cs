@@ -6,21 +6,21 @@ namespace PokemonTCG
 {
     public partial class MainForm : Form
     {
-        private string boosterType;
+        private int boosterId; 
         private CardManager cardManager = new CardManager();
         private Label lblNomCarte;
         private PictureBox pbImageCarte;
         private Button btnOuvrirBooster;
-
-        public MainForm(string boosterType)
+        public MainForm(int boosterId)
         {
-            this.boosterType = boosterType;
+            this.boosterId = boosterId;
             InitializeComponent();
         }
 
+   
         private void btnOuvrirBooster_Click(object sender, EventArgs e)
         {
-            var (nomCarte, imagePath, rarete) = cardManager.GetRandomCard();
+            var (nomCarte, imagePath, rarete) = cardManager.GetRandomCardFromBooster(boosterId);
 
             if (!string.IsNullOrEmpty(nomCarte))
             {
@@ -42,6 +42,5 @@ namespace PokemonTCG
                 pbImageCarte.Image = null;
             }
         }
-
     }
 }

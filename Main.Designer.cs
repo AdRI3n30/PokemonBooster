@@ -6,15 +6,9 @@ namespace PokemonTCG
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Variable nécessaire au concepteur.
-        /// </summary>
+
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Nettoyage des ressources utilisées.
-        /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -25,11 +19,6 @@ namespace PokemonTCG
         }
 
         #region Code généré par le Concepteur Windows Form
-
-        /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
-        /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -60,7 +49,6 @@ namespace PokemonTCG
 
             this.ClientSize = new Size(542, 358);
             this.Name = "MainForm";
-            this.Text = $"Booster : {boosterType}";
             this.ResumeLayout(false);
         }
 

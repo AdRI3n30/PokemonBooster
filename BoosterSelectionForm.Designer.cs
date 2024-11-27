@@ -6,15 +6,8 @@ namespace PokemonBooster
 {
     partial class BoosterSelectionForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -40,7 +33,6 @@ namespace PokemonBooster
             lblBoosterEau.Text = "Booster Eau";
             lblBoosterEau.TextAlign = ContentAlignment.MiddleCenter;
 
-
             Label lblBoosterElectric = new Label();
             lblBoosterElectric.Location = new System.Drawing.Point(550, 10);
             lblBoosterElectric.Size = new System.Drawing.Size(200, 30);
@@ -48,28 +40,29 @@ namespace PokemonBooster
             lblBoosterElectric.TextAlign = ContentAlignment.MiddleCenter;
 
             PictureBox pbBoosterFeu = new PictureBox();
-            pbBoosterFeu.Location = new System.Drawing.Point(50, 50); 
-            pbBoosterFeu.Size = new System.Drawing.Size(200, 200); 
+            pbBoosterFeu.Location = new System.Drawing.Point(50, 50);
+            pbBoosterFeu.Size = new System.Drawing.Size(200, 200);
             pbBoosterFeu.Image = Image.FromFile("Images/Booster-Feu.jpg");
             pbBoosterFeu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbBoosterFeu.Cursor = Cursors.Hand;
-            pbBoosterFeu.Click += (sender, e) => OpenMainForm("Feu");
+            pbBoosterFeu.Click += (sender, e) => OpenMainForm(1); 
 
             PictureBox pbBoosterEau = new PictureBox();
             pbBoosterEau.Location = new System.Drawing.Point(300, 50);
             pbBoosterEau.Size = new System.Drawing.Size(200, 200);
             pbBoosterEau.Image = Image.FromFile("Images/Booster-Eau.jpg");
             pbBoosterEau.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbBoosterEau.Cursor = Cursors.Hand; 
-            pbBoosterEau.Click += (sender, e) => OpenMainForm("Eau");
+            pbBoosterEau.Cursor = Cursors.Hand;
+            pbBoosterEau.Click += (sender, e) => OpenMainForm(2);
 
             PictureBox pbBoosterElectric = new PictureBox();
-            pbBoosterElectric.Location = new System.Drawing.Point(550, 50); 
-            pbBoosterElectric.Size = new System.Drawing.Size(200, 200);  
+            pbBoosterElectric.Location = new System.Drawing.Point(550, 50);
+            pbBoosterElectric.Size = new System.Drawing.Size(200, 200);
             pbBoosterElectric.Image = Image.FromFile("Images/Booster-Electric.jpg");
             pbBoosterElectric.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbBoosterElectric.Cursor = Cursors.Hand; 
-            pbBoosterElectric.Click += (sender, e) => OpenMainForm("Électrique");
+            pbBoosterElectric.Cursor = Cursors.Hand;
+            pbBoosterElectric.Click += (sender, e) => OpenMainForm(3); 
+
             this.Controls.Add(lblBoosterFeu);
             this.Controls.Add(lblBoosterEau);
             this.Controls.Add(lblBoosterElectric);
@@ -82,13 +75,12 @@ namespace PokemonBooster
             this.ResumeLayout(false);
         }
 
-        private void OpenMainForm(string boosterType)
+        private void OpenMainForm(int boosterId)
         {
-            MainForm mainForm = new MainForm(boosterType);
-            this.Hide(); 
-            mainForm.ShowDialog(); 
+            MainForm mainForm = new MainForm(boosterId);
+            this.Hide();
+            mainForm.ShowDialog();
             this.Show();
         }
-
     }
 }
