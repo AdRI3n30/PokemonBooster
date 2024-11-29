@@ -19,7 +19,7 @@ namespace PokemonBooster
         private void InitializeComponent()
         {
       
-            this.Text = "Accueil Pokémon";
+            this.Text = "Accueil Pokémon TCG";
             this.Size = new Size(500, 450);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.FromArgb(240, 240, 255);
@@ -63,7 +63,6 @@ namespace PokemonBooster
             btnCollection.FlatAppearance.BorderSize = 0;
             btnCollection.Click += BtnCollection_Click;
 
-            // Bouton "PVP"
             btnPvp = new Button
             {
                 Text = "Mode PVP (À venir)",

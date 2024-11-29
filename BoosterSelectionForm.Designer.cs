@@ -33,14 +33,14 @@ namespace PokemonBooster
             lblBoosterFeu.Font = new Font("Arial", 12, FontStyle.Bold);
             lblBoosterFeu.ForeColor = Color.FromArgb(200, 50, 50); 
 
+
             Label lblBoosterEau = new Label();
             lblBoosterEau.Location = new System.Drawing.Point(300, 270);
             lblBoosterEau.Size = new System.Drawing.Size(200, 30);
             lblBoosterEau.Text = "Booster Eau";
             lblBoosterEau.TextAlign = ContentAlignment.MiddleCenter;
             lblBoosterEau.Font = new Font("Arial", 12, FontStyle.Bold);
-            lblBoosterEau.ForeColor = Color.FromArgb(50, 50, 200); 
-
+            lblBoosterEau.ForeColor = Color.FromArgb(50, 50, 200);
 
             Label lblBoosterElectric = new Label();
             lblBoosterElectric.Location = new System.Drawing.Point(550, 270);
@@ -77,12 +77,26 @@ namespace PokemonBooster
             pbBoosterElectric.BorderStyle = BorderStyle.FixedSingle;
             pbBoosterElectric.Click += (sender, e) => OpenMainForm(3);
 
+            Button btnBack = new Button();
+            btnBack.Text = "Retour";
+            btnBack.Location = new System.Drawing.Point(20, 330);
+            btnBack.Size = new System.Drawing.Size(100, 40);
+            btnBack.Font = new Font("Arial", 10, FontStyle.Bold);
+            btnBack.BackColor = Color.FromArgb(200, 50, 50);
+            btnBack.ForeColor = Color.White;
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.FlatAppearance.BorderSize = 0;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.Click += BtnBack_Click;
+
+         
             this.Controls.Add(lblBoosterFeu);
             this.Controls.Add(lblBoosterEau);
             this.Controls.Add(lblBoosterElectric);
             this.Controls.Add(pbBoosterFeu);
             this.Controls.Add(pbBoosterEau);
             this.Controls.Add(pbBoosterElectric);
+            this.Controls.Add(btnBack);
 
             this.ResumeLayout(false);
         }
@@ -93,6 +107,14 @@ namespace PokemonBooster
             this.Hide();
             mainForm.ShowDialog();
             this.Show();
+        }
+
+        private void BtnBack_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            StartForm startForm = new StartForm(); 
+            startForm.ShowDialog();
+            this.Close();
         }
     }
 }
