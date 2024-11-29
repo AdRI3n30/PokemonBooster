@@ -17,7 +17,7 @@ namespace PokemonBooster
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BoosterSelectionForm());
+            Application.Run(new StartForm());
         }
     }
 }

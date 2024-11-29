@@ -105,6 +105,9 @@
       <DependentUpon>BoosterSelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CardManager.cs" />
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
