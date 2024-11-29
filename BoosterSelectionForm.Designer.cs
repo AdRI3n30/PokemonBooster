@@ -21,23 +21,34 @@ namespace PokemonBooster
         {
             this.SuspendLayout();
 
+            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Text = "Choisissez un Booster";
+            this.BackColor = Color.FromArgb(240, 240, 240); 
+
             Label lblBoosterFeu = new Label();
-            lblBoosterFeu.Location = new System.Drawing.Point(50, 10);
+            lblBoosterFeu.Location = new System.Drawing.Point(50, 270);
             lblBoosterFeu.Size = new System.Drawing.Size(200, 30);
             lblBoosterFeu.Text = "Booster Feu";
             lblBoosterFeu.TextAlign = ContentAlignment.MiddleCenter;
+            lblBoosterFeu.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblBoosterFeu.ForeColor = Color.FromArgb(200, 50, 50); 
 
             Label lblBoosterEau = new Label();
-            lblBoosterEau.Location = new System.Drawing.Point(300, 10);
+            lblBoosterEau.Location = new System.Drawing.Point(300, 270);
             lblBoosterEau.Size = new System.Drawing.Size(200, 30);
             lblBoosterEau.Text = "Booster Eau";
             lblBoosterEau.TextAlign = ContentAlignment.MiddleCenter;
+            lblBoosterEau.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblBoosterEau.ForeColor = Color.FromArgb(50, 50, 200); 
+
 
             Label lblBoosterElectric = new Label();
-            lblBoosterElectric.Location = new System.Drawing.Point(550, 10);
+            lblBoosterElectric.Location = new System.Drawing.Point(550, 270);
             lblBoosterElectric.Size = new System.Drawing.Size(200, 30);
             lblBoosterElectric.Text = "Booster Électrique";
             lblBoosterElectric.TextAlign = ContentAlignment.MiddleCenter;
+            lblBoosterElectric.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblBoosterElectric.ForeColor = Color.FromArgb(200, 200, 50);
 
             PictureBox pbBoosterFeu = new PictureBox();
             pbBoosterFeu.Location = new System.Drawing.Point(50, 50);
@@ -45,7 +56,8 @@ namespace PokemonBooster
             pbBoosterFeu.Image = Image.FromFile("Images/Booster-Feu.jpg");
             pbBoosterFeu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbBoosterFeu.Cursor = Cursors.Hand;
-            pbBoosterFeu.Click += (sender, e) => OpenMainForm(1); 
+            pbBoosterFeu.BorderStyle = BorderStyle.FixedSingle;
+            pbBoosterFeu.Click += (sender, e) => OpenMainForm(1);
 
             PictureBox pbBoosterEau = new PictureBox();
             pbBoosterEau.Location = new System.Drawing.Point(300, 50);
@@ -53,6 +65,7 @@ namespace PokemonBooster
             pbBoosterEau.Image = Image.FromFile("Images/Booster-Eau.jpg");
             pbBoosterEau.SizeMode = PictureBoxSizeMode.StretchImage;
             pbBoosterEau.Cursor = Cursors.Hand;
+            pbBoosterEau.BorderStyle = BorderStyle.FixedSingle;
             pbBoosterEau.Click += (sender, e) => OpenMainForm(2);
 
             PictureBox pbBoosterElectric = new PictureBox();
@@ -61,7 +74,8 @@ namespace PokemonBooster
             pbBoosterElectric.Image = Image.FromFile("Images/Booster-Electric.jpg");
             pbBoosterElectric.SizeMode = PictureBoxSizeMode.StretchImage;
             pbBoosterElectric.Cursor = Cursors.Hand;
-            pbBoosterElectric.Click += (sender, e) => OpenMainForm(3); 
+            pbBoosterElectric.BorderStyle = BorderStyle.FixedSingle;
+            pbBoosterElectric.Click += (sender, e) => OpenMainForm(3);
 
             this.Controls.Add(lblBoosterFeu);
             this.Controls.Add(lblBoosterEau);
@@ -70,8 +84,6 @@ namespace PokemonBooster
             this.Controls.Add(pbBoosterEau);
             this.Controls.Add(pbBoosterElectric);
 
-            this.ClientSize = new System.Drawing.Size(800, 350);
-            this.Text = "Choisissez un Booster";
             this.ResumeLayout(false);
         }
 
