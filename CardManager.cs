@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO; // Pour vérifier si l'image existe sur le disque
 
 public class CardManager
 {
@@ -36,6 +37,13 @@ public class CardManager
                             nomCarte = reader.GetString("name");
                             imagePath = reader.GetString("image_url");
                             rarete = reader.GetString("rarete");
+
+                       
+                            if (!string.IsNullOrEmpty(imagePath) && !File.Exists(imagePath))
+                            {
+                                Console.WriteLine($"Erreur : L'image de la carte '{nomCarte}' est introuvable à l'emplacement '{imagePath}'.");
+                                imagePath = null;
+                            }
                         }
                     }
                 }
@@ -48,6 +56,7 @@ public class CardManager
 
         return (nomCarte, imagePath, rarete);
     }
+
     public List<(string nomCarte, string imagePath, string rarete)> GetCardsFromBooster(int boosterId, int numberOfCards)
     {
         var cards = new List<(string nomCarte, string imagePath, string rarete)>();
