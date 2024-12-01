@@ -146,3 +146,4 @@ C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Poke
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Pokemon-cards\Water-Energy.png
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Pokemon-cards\Weedle.png
 C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\Images\Pokemon-cards\Zapdos.png
+C:\Users\Adrien\source\repos\PokemonBooster\PokemonBooster\bin\Debug\DataBase\pokemon_tcg.sql
